@@ -1,0 +1,37 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.active{
+  color: rgb(108, 103, 103) !important;
+}
+
+.inactive{
+  color: white !important;
+}
+
+a{
+  text-decoration: none;
+}
+
+.carouselImg{
+  width: 100px;
+  height: auto;
+  pointer-events: none;
+}
+
+.carouselContainer{
+  display: flex; 
+  flex-direction: column;
+  gap: 5px;
+  width: 100px;
+  user-select: none;
+  text-align: center;
+}
