@@ -9,7 +9,7 @@ import { img_300, imgUnavailable } from '../utils';
 import { CardActionArea } from '@mui/material';
 import DetailModal from './DetailModal';
 
-export default function SingleContent({id, poster_path, title, name, first_air_date, release_date, media_type, vote_average, type}) {
+export default function SingleContent({id, poster_path, title, name, first_air_date, release_date, media_type, type}) {
     // console.log(id, poster_path, title);
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -30,7 +30,7 @@ export default function SingleContent({id, poster_path, title, name, first_air_d
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
             <span>{media_type}</span><span>{first_air_date || release_date}</span>
         </Typography>
-        <span style={{position:"absolute", top:0, right:0, width:"2rem", height:"2rem", textAlign:"center", color:"white", background:"gray", borderRadius:"50%", padding:"5px"}}>{vote_average.toFixed(1)}</span>
+        {/* <span style={{position:"absolute", top:0, right:0, width:"2rem", height:"2rem", textAlign:"center", color:"white", background:"gray", borderRadius:"50%", padding:"5px"}}>{vote_average.toFixed(1)}</span> */}
       </CardContent>
       </CardActionArea>
       {open && <DetailModal open={open} setOpen={setOpen} id={id} media_type={media_type || type}/>}
